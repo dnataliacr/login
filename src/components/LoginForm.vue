@@ -1,4 +1,6 @@
 <template>
+ <el-row justify="center">
+    <el-col :span="12">
   <el-form
     ref="ruleForm"
     :model="ruleForm"
@@ -31,6 +33,8 @@
       >
     </el-form-item>
   </el-form>
+  <div class="grid-content bg-purple-dark"></div></el-col>
+  </el-row>
 </template>
 
 <script>
