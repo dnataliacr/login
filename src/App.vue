@@ -32,19 +32,11 @@ export default defineComponent({
 });
 </script>
 <style>
-.el-header {
-   background-color: #e9eef3;
- 
-  color: var(--el-text-color-primary);
-  text-align: center;
-  line-height: 60px;
-}
 
 .el-main {
   color: var(--el-text-color-primary);
   text-align: center;
   line-height: 160px;
-  height: 90vh;
 }
 
 body > .el-container {
