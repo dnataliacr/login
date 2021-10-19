@@ -33,8 +33,13 @@
       >
     </el-form-item>
   </el-form>
-  <div class="grid-content bg-purple-dark"></div></el-col>
+
+<div v-if="errorAlert">
+  <p>Las credenciales ingresadas no coinciden con nuestras bases de datos</p> 
+</div>
+  </el-col>
   </el-row>
+
 </template>
 
 <script>
@@ -65,6 +70,7 @@ export default {
     };
 
     return {
+      errorAlert: false,
       ruleForm: {
         email: "",
         pass: "",
@@ -88,7 +94,8 @@ export default {
           );
 
           if (!result) {
-            alert(userStore.state.error);
+            console.log(userStore.state.error);
+            this.errorAlert = true
           }
         } else {
           return false;
